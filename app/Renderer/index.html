@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Converts CSV files to PDF files">
+  <meta name="author" content="Angel Serrato and Robert Yun">
+  <link rel="stylesheet" href="styles.css">
+
+  <title>CSV to PDF</title>
+</head>
+<body>
+
+  <!-- Header section -->
+
+    <h1> 
+        <img class="header-image" 
+            src="img/csvIcon.png" 
+            alt="CSV icon">
+        <span class="header-text"> Mass CSV to PDF </span>
+    </h1>
+
+
+  <!-- Dropzone section -->
+  
+    <img class="dropzone-img"
+        src="img/documentIcon.png"
+        alt="Document icon">
+    <div class="drop-zone-container">
+        <div class="drop-zone-background"></div>
+        <div id="drop-zone"  class= "drop-zone">
+            <h3>
+                <span class="dropzone-bottom-text">Drag and drop files here </span>
+            </h3>
+            <input type="file" id="file-input" class="file-input" accept = ".csv"> 
+        </div>
+    </div>
+
+
+
+  <!-- Input File text section -->
+  
+    <p id="inputFileStyle">
+      Input File: <span id="fileInputName"></span>
+  </p>
+
+
+  <!-- Convertor section -->
+
+    <div id="convertor">
+      <button id="convert-button" disabled>CONVERT</button>
+    </div>
+
+    <div class="col-3">
+      <div class="snippet" data-title="dot-pulse">
+        <div class="stage">
+          <div class="dot-pulse invisible"></div>
+        </div>
+      </div>
+    </div>  
+
+    <!-- Night Mode -->
+    <div class="night-mode">
+      <i class="fas fa-sun"></i>
+        &nbsp;&nbsp;&nbsp;
+        <input type="checkbox" id="tooglenight" class="cbx hidden"/>
+        <label for="tooglenight" class="switch"></label>
+        &nbsp;&nbsp;&nbsp;
+      <i class="fas fa-moon"></i>
+  </div>
+    
+    <script src="render.js"></script>
+
+    <h5> 
+      <img class="logo-image" 
+          src="img/logo.png" 
+          alt="Hightower icon">
+    </h5>
+
+    
+</body>
+</html>

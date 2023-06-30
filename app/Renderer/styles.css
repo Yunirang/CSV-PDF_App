@@ -1,0 +1,362 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding-bottom: 50px;
+    background-color: #ffffff; 
+    color: #000000; 
+}
+.drop-zone-container {
+  position: relative;
+}
+
+.drop-zone-background {
+  position: fixed;
+  top: 45%; /* Adjust the value to move the box up */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: 245px;
+  background-color: #FCA16D;
+  border-radius: 35px;
+}
+
+
+.drop-zone {
+  width: 300px;
+  height: 225px;
+  border: 2px dashed #ffffff;
+  background-color: #F77E3E;
+  border-radius: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: 45%; /* Adjust the value to move the box up */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+
+#inputFileStyle {
+    position: fixed;
+    top: 70%;
+    z-index: 999999;
+    align-items: center;
+    font-family: Verdana, sans-serif;
+    letter-spacing: -1px;
+    font-weight: 300;
+    font-size: 10;
+  }
+.file-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+.drop-zone h3 {
+  margin: 0;
+}
+
+h1 {
+  position: fixed;
+  top: 2%;
+  text-align: center;
+  font-size: 13pt;
+  align-items: center;
+  display: flex;
+}
+
+.header-image {
+  width: 40px;
+  height: auto;
+}
+
+.header-text {
+  margin-left: 6px;
+  font-family: Verdana, sans-serif;
+  letter-spacing: -1px;
+  font-weight: 400;
+  color: "black";
+}
+
+.dropzone-bottom-text {
+  font-family: Verdana, sans-serif;
+  letter-spacing: -1px;
+  font-weight: 400;
+  align-items: center;
+  font-size: 13pt;
+  position: relative;
+  top: 300%;
+}
+
+.dropzone-img {
+  z-index: 9999;
+  width: 50px;
+  align-items: center;
+  position: fixed;
+  top: 35%;
+}
+
+#convert-button {
+    display: block;
+    padding: 10px 20px;
+    background-color: #FFE6CC;
+    border-color: #D79B00;
+    font-size: 15px;
+    font-weight: 300;
+    border: 1pt Solid #D79B00;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 99999;
+    position: fixed;
+    top: 375px;
+    left: 130px;
+    font-family: Verdana, sans-serif;
+    color:black;
+}
+
+#convert-button:hover:not([disabled]){
+    background-image: linear-gradient(rgb(0 0 0/5%) 0 0);
+}
+
+#convert-button[disabled]
+{
+    opacity: 50%;
+}
+
+/* about section with centered text of about-text and h4 */
+.about { 
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #F77E3E;
+  color: #242424;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+.about-text {
+  font-family: Verdana, sans-serif;
+  letter-spacing: -1px;
+  font-weight: 300;
+  align-items: center;
+  font-size: 11pt;
+}
+
+a {
+  color: #F77E3E; 
+  text-decoration: none; 
+  transition: color 0.2s; 
+}
+
+a:hover {
+  color: #FF8C00; 
+  text-decoration: underline;
+}
+
+
+a:visited {
+  color: #FF4500;
+}
+
+h4 {
+  padding-top: 30px;
+    text-align: center;
+    font-size: 10.5pt;
+    margin-left: 6px;
+    font-family: Verdana, sans-serif;
+    letter-spacing: -1px;
+    font-weight: 300;
+    position: fixed;
+}
+
+.logo-image {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    width: 45px;
+}
+
+/**
+ * ==============================================
+ * Dot Pulse
+ * ==============================================
+ */
+ .dot-pulse {
+    position: fixed;
+    left: -9810px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #f1d9bf;
+    color: #f1d9bf;
+    box-shadow: 9999px 0 0 -5px;
+    animation: dot-pulse 1.5s infinite linear;
+    animation-delay: 0.25s;
+  }
+  .dot-pulse::before, .dot-pulse::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #f1d9bf;
+    color: #f1d9bf;
+  }
+  .dot-pulse::before {
+    box-shadow: 9984px 0 0 -5px;
+    animation: dot-pulse-before 1.5s infinite linear;
+    animation-delay: 0s;
+  }
+  .dot-pulse::after {
+    box-shadow: 10014px 0 0 -5px;
+    animation: dot-pulse-after 1.5s infinite linear;
+    animation-delay: 0.5s;
+  }
+  
+  @keyframes dot-pulse-before {
+    0% {
+      box-shadow: 9984px 0 0 -5px;
+    }
+    30% {
+      box-shadow: 9984px 0 0 2px;
+    }
+    60%, 100% {
+      box-shadow: 9984px 0 0 -5px;
+    }
+  }
+  @keyframes dot-pulse {
+    0% {
+      box-shadow: 9999px 0 0 -5px;
+    }
+    30% {
+      box-shadow: 9999px 0 0 2px;
+    }
+    60%, 100% {
+      box-shadow: 9999px 0 0 -5px;
+    }
+  }
+  @keyframes dot-pulse-after {
+    0% {
+      box-shadow: 10014px 0 0 -5px;
+    }
+    30% {
+      box-shadow: 10014px 0 0 2px;
+    }
+    60%, 100% {
+      box-shadow: 10014px 0 0 -5px;
+    }
+  }
+
+  .invisible {
+      display: none;
+  }
+
+  /**
+  NIGHT MODE
+  **/
+
+.night{
+    background-position: 0 0;
+}
+.night-mode{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.night-mode > i{
+  font-size: 44px;
+  transition: all .2s ease-in;
+}
+/* custom checkbox*/
+.switch {
+    position: fixed;
+    top: 20px;
+    right: 15px;
+    display: block;
+    height: 20px;
+    width: 44px;
+    background: #303030;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .switch:after {
+    position: fixed;
+    right: 13px;
+    top: 16.5px;
+    display: block;
+    width: 26px;
+    height: 26px;
+    border-radius: 100px;
+    background: black;
+    box-shadow: 0px 3px 3px rgba(0,0,0,0.05);
+    content: '';
+    transition: all 0.3s ease;
+  }
+  .switch:active:after { transform: scale(1.15, 0.85); }
+  .cbx:checked ~ label { background: #EBEBEB; }
+  .cbx:checked ~ label:after {
+    right: 34px;
+    background: #FFFFFF;
+  }
+  .cbx:disabled ~ label {
+    background: #d5d5d5;
+    pointer-events: none;
+  }
+  .cbx:disabled ~ label:after { background: #bcbdbc; }
+  .hidden { display: none; }
+
+
+
+
+  .amogus {
+    color: black;
+    font-size: 15pt;
+    position: fixed;
+    bottom: 15px;
+  }
+
+  .sus1 {
+    width: 35px;
+    z-index: -1;
+    position: fixed;
+    right: 15px;
+    bottom: 40px;
+    animation: rotation 6s infinite linear;
+  }
+
+  .sus2 {
+    width: 35px;
+    z-index: -1;
+    position: fixed;
+    left: 15px;
+    bottom: 40px;
+    animation: rotation 6s infinite linear;
+  }
+
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
